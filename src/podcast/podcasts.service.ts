@@ -46,6 +46,7 @@ export class PodcastsService {
     updatePodcastDto: UpdatePodcastDto,
   ): { err: string | null } {
     const { podcast, err: findErr } = this.getPodcast(id);
+    // console.log(this.getPodcast(id));
     if (findErr) {
       return { err: findErr };
     }
